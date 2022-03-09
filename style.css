@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #e0d1d1;
+  height: 100vh;
+  padding: 2rem;
+}
+/*navbar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+}
+.start {
+  font-size: 1.5rem;
+  font-weight: 400;
+  align-self: center;
+  order: 1;
+  border-radius: 2rem;
+}
+.logo {
+  height: 9rem;
+  width: 11rem;
+}
+
+.login {
+  align-self: center;
+  display: flex;
+  order: 2;
+}
+.login_input {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+.login_input:focus {
+  outline: none;
+  border: 2px solid rgb(233, 219, 219);
+}
+.login_input::placeholder {
+  color: #bbb;
+}
+.login_btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+/*navbar ends*/
+.main {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 0;
+}
+/*balance*/
+.balance {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+.balance_label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+.balance_date {
+  font-size: 1.3rem;
+  color: rgb(90, 80, 80);
+}
+.balance_value {
+  font-size: 4rem;
+  font-weight: 400;
+}
+/*transaction*/
+.transaction {
+  grid-row: 2 / span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+.transaction_row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.transaction_type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+.transaction_type_deposit {
+  background-image: linear-gradient(to top left, #37b88b, #88e23f);
+}
+.transaction_type_withdrawal {
+  background-image: linear-gradient(to top left, #642938, #d4101a);
+}
+.transaction_date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+.transaction_value {
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+/*summary*/
+.summary {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.summary_label {
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+.summary_value {
+  align-self: center;
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+.summary_value_in,
+.summary_value_interest {
+  color: #02570d;
+}
+.summary_value_out {
+  color: #6d0d1a;
+}
+.btn_sort {
+  align-self: center;
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.sort {
+  display: flex;
+}
+/*operations*/
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+}
+.operation_transfer {
+  background-image: linear-gradient(to top left, #094547, #6bd1f3);
+}
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: rgb(53, 52, 52);
+}
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+.form_input {
+  width: 100%;
+  border: none;
+  background-color: rgba(218, 209, 209, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(58, 43, 43);
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form_label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.form_btn {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form_btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.operation_loan {
+  background-image: linear-gradient(to top left, #138157, #a1f756);
+}
+.form_loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form_label_loan {
+  grid-row: 2/3;
+}
+
+.operation_close {
+  background-image: linear-gradient(to top left, #e03b64, #df474e);
+}
+/*timer*/
+.logout_timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+.timer {
+  font-weight: 800;
+}

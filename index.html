@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Bank App</title>
+         <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+         <!--Navbar-->
+         <nav>
+                  <p class="start">LOGIN TO GET STARTED</p>
+                  <img src="Bank App.png" alt="Logo" class="logo" />
+
+                  <form class="login">
+                           <input type="text" placeholder="user" class="login_input login_input_user" />
+                           <!-- In practice, use type="password" -->
+                           <input type="text" placeholder="PIN" maxlength="4" class="login_input login_input_pin" />
+                           <button class="login_btn">&rarr;</button>
+                  </form>
+         </nav>
+
+         <main class="main">
+
+
+                  <!-- BALANCE -->
+                  <div class="balance">
+                           <div>
+                                    <p class="balance_label">Current balance</p>
+                                    <p class="balance_date">
+                                             As of <span class="date"></span>
+                                    </p>
+                           </div>
+                           <p class="balance_value">0000€</p>
+                  </div>
+
+
+                  <!-- transaction -->
+                  <div class="transaction">
+                           <div class="transaction_row">
+                                    <div class="transaction_type transaction_type_deposit"></div>
+                                    <div class="transaction_date"></div>
+                                    <div class="transaction_value"></div>
+                           </div>
+                           <div class="transaction_row">
+                                    <div class="transaction_type transaction_type_withdrawal">
+
+                                    </div>
+                                    <div class="transaction_date"></div>
+                                    <div class="transaction_value"></div>
+                           </div>
+                  </div>
+
+                  <!---Summary-->
+                  <div class="summary">
+                           <p class="summary_label">In</p>
+                           <p class="summary_value total_deposit">0000€</p>
+                           <p class="summary_label">Out</p>
+                           <p class="summary_value total_withdrawal ">0000€</p>
+                           <p class="summary_label">Credit Interest</p>
+                           <p class="summary_value total_interest">0000€</p>
+                           <button class="btn_sort">&downarrow;SORT</button>
+
+                  </div>
+                  <!--------Operations------------->
+                  <!-- TRANSFERS -->
+                  <div class="operation operation_transfer">
+                           <h2>Transfer money</h2>
+                           <form class="form">
+                                    <input type="text" class="form_input form_input_to" />
+                                    <input type="number" class="form_input form_input_amount" />
+                                    <button class="form_btn transfer_btn">&rarr;</button>
+                                    <label class="form_label">Transfer to</label>
+                                    <label class="form_label">Amount</label>
+                           </form>
+                  </div>
+                  <!-- LOAN -->
+                  <div class="operation operation_loan">
+                           <h2>Request loan</h2>
+                           <form class="form form_loan">
+                                    <input type="number" class="form_input loan_input" />
+                                    <button class="form_btn loan_btn ">&rarr;</button>
+                                    <label class="form_label">Amount</label>
+                           </form>
+                  </div>
+
+                  <!-- CLOSE -->
+                  <div class="operation operation_close">
+                           <h2>Close account</h2>
+                           <form class="form">
+                                    <input type="text" class="form_input closeAccount_input" />
+                                    <input type="password" maxlength="6" class="form_input close_pin" />
+                                    <button class="form_btn close_btn">&rarr;</button>
+                                    <label class="form_label">Confirm user</label>
+                                    <label class="form_label">Confirm PIN</label>
+                           </form>
+                  </div>
+                  <!-- LOGOUT TIMER -->
+                  <p class="logout_timer">
+                           You will be logged out in <span class="timer">05:00</span>
+                  </p>
+
+         </main>
+
+         <script src="script.js"></script>
+</body>
+
+</html>
